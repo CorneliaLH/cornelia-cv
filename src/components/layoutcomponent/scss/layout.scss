@@ -1,3 +1,26 @@
+
+
+.containerCoverImage {
+
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../../images/home-g0eb7d4997_1920.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.containerPage {
+  width: 100%;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
 .menu {
   position: fixed;
   top: 0;
@@ -10,12 +33,12 @@
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   z-index: 999;
-  background-color: white;
+  background-color: #394B41E6;
 
   .menu__burger {
     width: 50px;
     height: 6px;
-    background-color: #bb52a7;
+    background-color: #59f9b4;
 
     border-radius: 5px;
     transition: all 0.05s ease-in-out;
@@ -25,7 +48,7 @@
       position: absolute;
       width: 50px;
       height: 6px;
-      background: #bb52a7;
+      background: #59f9b4;
       border-radius: 5px;
       transition: all 0.5s ease-in-out;
       transform: translateY(-16px);
@@ -36,7 +59,7 @@
       position: absolute;
       width: 50px;
       height: 6px;
-      background: #bb52a7;
+      background: #59f9b4;
       border-radius: 3px;
       transition: all 0.5s ease-in-out;
       transform: translateY(16px);
@@ -55,7 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #bb52a8;
+    background-color: #394B41F7;
     opacity: 0.9;
     width: 100%;
     top: 0;
@@ -72,9 +95,10 @@
       align-items: center;
 
       .nav__item {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
 
         .nav__link {
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
           color: white;
           text-decoration: none;
         }
@@ -97,18 +121,78 @@
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
+
+
 .main {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.595);
-  width: 100vw;
+@media screen and (max-width:600px) {
+  .containerCoverImage {
+
+
+    background-image: url("../../../images/home-g0eb7d4997_1920-mobile.jpg");
+    height: 100vh;
+  width: 100%;
+
+  }
+
+  .main {
+  width: 100%;
+  margin: 0;
+  }
+
+  .nav__item {
+    .nav__link {
+    font-size: 1.2rem;
+  }}
+
+  .menu {
+    width: 50px;
+    height: 50px;
+  
+    box-sizing: border-box;
+  .menu__burger {
+    width: 35px;
+    height: 4px;
+
+    &:before {
+      content: "";
+     
+      width: 35px;
+      height: 4px;
+   
+     
+    }
+
+    &:after {
+
+      width: 35px;
+      height: 4px;
+  
+    }
+  }
+  }
+
+  .menu.open .menu__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  .menu.open .menu__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  
+  .menu.open .menu__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
 }

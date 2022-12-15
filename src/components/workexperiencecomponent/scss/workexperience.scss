@@ -1,0 +1,145 @@
+.workexperienceContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom:50px;
+   
+    .workexperience{
+        height: 100%;
+        width:60%;
+        height:fit-content;
+        background-color:#394B41E6;
+        border-radius: 5px;
+        padding:20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+    .workHeadingh3 {
+        color:#59f9b4;
+        width: 50%;
+        text-align: center;
+    }
+
+    .workText {
+      width: 50%;
+padding:0;   
+
+      ul {
+        color: white;
+        margin: 0;
+        padding:0;   
+  
+  
+      .workTitle {
+        list-style-type: none;
+        font-size: 1.4rem;
+        margin-top:5px;
+      }
+      .workInfo {
+        list-style-type: none;
+        font-style: italic;
+      }
+
+     .workMoreText{
+      list-style-type: none;
+        font-style: italic;
+     }
+    }
+    }
+}
+}
+
+
+@media (min-width:600px) and (max-width:900px) {
+  .workexperienceContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom:50px;
+   
+    .workexperience{
+    
+        width:80%;
+        box-sizing: border-box;
+    .workHeadingh3 {
+
+    }
+
+    .workText {
+ 
+
+      ul {
+
+  
+  
+      .workTitle {
+  
+      }
+      .workInfo {
+
+      }
+
+     .workMoreText{
+
+     }
+    }
+    }
+}
+}
+
+}
+
+@media screen and (max-width:600px) {
+
+  .workexperienceContainer {
+   
+    
+   
+    .workexperience{
+      flex-direction: column;
+        width:90%;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+    .workHeadingh3 {
+font-size: 1.1rem;
+text-align: center;
+    }
+
+    .workText {
+      width: 90%;
+      font-size: 0.8rem;
+
+      ul {
+
+  
+  
+      .workTitle {
+        font-size: 0.8rem;
+        svg {
+          position: relative;
+          top: 3px;
+          height: 16px;
+          width: 16px;
+      }
+      }
+      .workInfo {
+        font-size: 0.8rem;
+      }
+
+     .workMoreText{
+      font-size: 0.8rem;
+     }
+    }
+    }
+}
+}
+
+}

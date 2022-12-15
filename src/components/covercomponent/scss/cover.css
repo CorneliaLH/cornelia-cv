@@ -1,2 +1,232 @@
-.containerCover{position:relative;left:0;top:0;height:100vh;width:100vw;background-image:url("../../../images/pexels-filippo-bergamaschi-986772.jpg");background-size:cover;background-repeat:no-repeat;background-position:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:start;-ms-flex-align:start;align-items:start}.containerCover .containerPresentation{width:80%;height:60%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.containerCover .containerPresentation section h1{font-family:"Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;color:#bb52a8;font-size:2.5rem;line-height:45px;margin-bottom:200px;text-shadow:0px 0px 30px white}.containerCover .containerPresentation .imageContainer{margin:0;height:350px;width:auto;background:-webkit-gradient(linear, left top, left bottom, from(rgba(187,82,168,0.85)), to(rgba(187,82,168,0.85)));background:linear-gradient(to bottom, rgba(187,82,168,0.85), rgba(187,82,168,0.85))}.containerCover .containerPresentation .imageContainer .imgCover{height:350px;width:auto;opacity:0.87}
-/*# sourceMappingURL=cover.css.map */
+.containerCover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.containerCover .containerPresentation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.containerCover .containerPresentation .containerH1 {
+  background-color: rgba(57, 75, 65, 0.9019607843);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border-radius: 5px;
+}
+.containerCover .containerPresentation .containerH1 h1 {
+  width: 80%;
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+  padding: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #59f9b4;
+  font-size: 2rem;
+  line-height: 45px;
+  text-shadow: 0px 0px 30px white;
+}
+.containerCover .containerPresentation .containerH1 .divider {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerCover .containerPresentation .containerH1 .divider div {
+  width: 40%;
+  height: 2px;
+  background-color: white;
+  border-radius: 5px;
+}
+.containerCover .containerPresentation .containerH1 .interestContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 70px;
+}
+.containerCover .containerPresentation .containerH1 .interestContainer .iconImageContainer {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 70px;
+  height: 70px;
+  z-index: 99;
+  cursor: pointer;
+}
+.containerCover .containerPresentation .containerH1 .interestContainer .iconImageContainer:hover .intrestIcon {
+  display: none;
+}
+.containerCover .containerPresentation .containerH1 .interestContainer .iconImageContainer:hover + .iconText {
+  display: block;
+  color: #59f9b4;
+}
+.containerCover .containerPresentation .containerH1 .interestContainer .iconImageContainer .intrestIcon {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 70px;
+  height: 70px;
+}
+.containerCover .containerPresentation .containerH1 .interestContainer .iconText {
+  position: relative;
+  margin-top: -60px;
+  display: none;
+  color: white;
+  width: 70px;
+  height: 90px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.containerCover .containerPresentation .imageContainer {
+  margin: 0;
+  height: 350px;
+  width: auto;
+}
+.containerCover .containerPresentation .imageContainer .imgCoverDesktop {
+  height: 350px;
+  width: auto;
+  opacity: 0.87;
+  border-radius: 5%;
+  display: block;
+}
+.containerCover .containerPresentation .imageContainer .imgCoverTablet {
+  display: none;
+  height: 350px;
+  width: auto;
+  opacity: 0.87;
+  border-radius: 5%;
+}
+
+.buttonMailContainer button {
+  margin-bottom: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
+  background-color: white;
+  border: none;
+  color: #394B41;
+  font-size: 1.2rem;
+}
+.buttonMailContainer button:hover {
+  background-color: #59f9b4;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .containerCover .containerPresentation {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .containerCover .containerPresentation .containerH1 {
+    width: 80%;
+    padding-bottom: 20px;
+  }
+  .containerCover .containerPresentation .containerH1 h1 {
+    width: 70%;
+    font-size: 1.4rem;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer .iconImageContainer:hover .intrestIcon {
+    display: none;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer .iconImageContainer:hover + .iconText {
+    display: none;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer .iconImageContainer .intrestIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer .iconText {
+    display: none;
+  }
+  .containerCover .containerPresentation .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  .containerCover .containerPresentation .imageContainer .imgCoverDesktop {
+    display: none;
+  }
+  .containerCover .containerPresentation .imageContainer .imgCoverTablet {
+    display: block;
+    width: 50%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .containerCover .containerPresentation {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .containerCover .containerPresentation .containerH1 {
+    height: 50%;
+    width: 90%;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+  }
+  .containerCover .containerPresentation .containerH1 h1 {
+    font-size: 1.3rem;
+    line-height: 25px;
+  }
+  .containerCover .containerPresentation .containerH1 .divider {
+    height: 20px;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer {
+    height: 50px;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer article {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer article .iconImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35%;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer article .iconImageContainer:hover .intrestIcon {
+    display: none;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer article .iconImageContainer:hover + .iconText {
+    display: none;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer article .iconImageContainer .intrestIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .containerCover .containerPresentation .containerH1 .interestContainer article .iconText {
+    display: none;
+  }
+  .containerCover .containerPresentation .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .containerCover .containerPresentation .imageContainer .imgCoverDesktop {
+    display: none;
+  }
+  .containerCover .containerPresentation .imageContainer .imgCoverTablet {
+    display: block;
+    width: 60%;
+    height: auto;
+  }
+  .buttonMailContainer button {
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=cover.css.map */

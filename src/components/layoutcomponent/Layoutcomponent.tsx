@@ -5,34 +5,37 @@ import "./scss/layout.css";
 export function Layoutcomponent() {
   const [menuOpen, setMenuOpen] = useState(false);
   let menuArray = [
-    "Home",
-    "Bakgrund",
-    "Färdigheter",
+    "Hem",
+    "Front-end kunskaper",
     "Arbetslivserfarenhet",
     "Utbildning",
     "Socialt",
     "Kontakt",
   ];
 
-  // useEffect(() => {
+
   let listItem = menuArray.map(function (menuLink: string, i) {
     return (
-      <li className='nav__item' key={i}>
-        <a href='#' className='nav__link'>
+      <li className='nav__item' key={i} onClick={()=>{
+        setMenuOpen(false)
+      }}>
+        <a href={"#" + menuLink} className='nav__link'>
           {menuLink}
         </a>
       </li>
     );
   });
-  // }, []);
+
 
   return (
     <>
+    <div className="containerCoverImage"></div>
+    <div className="containerPage">
       <header className='header'>
         <div
           className='menu'
           onClick={() => {
-            console.log("click");
+         
             if (!menuOpen) {
               document.querySelector(".menu")?.classList.add("open");
               setMenuOpen(true);
@@ -56,11 +59,8 @@ export function Layoutcomponent() {
       <main className='main'>
         <Outlet></Outlet>
       </main>
-      <footer>
-        <div className='footer'>
-          <p>footer</p>
-        </div>
-      </footer>
+      
+      </div>
     </>
   );
 }
