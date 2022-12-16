@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cornelia-cv/static/css/main.daa0303c.css",
-    "main.js": "/cornelia-cv/static/js/main.de0e2c04.js",
+    "main.js": "/cornelia-cv/static/js/main.5f052f0c.js",
     "static/js/787.6a2322c7.chunk.js": "/cornelia-cv/static/js/787.6a2322c7.chunk.js",
     "static/media/home-g0eb7d4997_1920.jpg": "/cornelia-cv/static/media/home-g0eb7d4997_1920.ae1658f42671f4c53875.jpg",
     "static/media/home-g0eb7d4997_1920-mobile.jpg": "/cornelia-cv/static/media/home-g0eb7d4997_1920-mobile.bd39e8e31e4a0c3af5a7.jpg",
@@ -13,11 +13,11 @@
     "static/media/linkedin.svg": "/cornelia-cv/static/media/linkedin.6718e6e616f72cb6579141e7bd4244be.svg",
     "static/media/envelope.svg": "/cornelia-cv/static/media/envelope.3d0565196ff338ce7ffea2f473b199fd.svg",
     "main.daa0303c.css.map": "/cornelia-cv/static/css/main.daa0303c.css.map",
-    "main.de0e2c04.js.map": "/cornelia-cv/static/js/main.de0e2c04.js.map",
+    "main.5f052f0c.js.map": "/cornelia-cv/static/js/main.5f052f0c.js.map",
     "787.6a2322c7.chunk.js.map": "/cornelia-cv/static/js/787.6a2322c7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.daa0303c.css",
-    "static/js/main.de0e2c04.js"
+    "static/js/main.5f052f0c.js"
   ]
 }
