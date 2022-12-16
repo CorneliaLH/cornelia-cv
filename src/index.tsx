@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename ="/cornelia-cv">
       <Routes>
         <Route path='/' element={<Layoutcomponent />}>
           <Route index element={<Maincomponent />} />
