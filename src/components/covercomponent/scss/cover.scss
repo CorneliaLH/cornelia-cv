@@ -1,13 +1,12 @@
-
 .containerCover {
-  position:absolute;
+  position: absolute;
   left: 0;
   top: 0;
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 
   .containerPresentation {
     width: 100%;
@@ -17,21 +16,20 @@
     justify-content: space-around;
     align-items: center;
     .containerH1 {
-      
-      background-color: #394B41E6;
+      background-color: #394b41e6;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      width:50%;
+      width: 50%;
       border-radius: 5px;
- 
+
       h1 {
         width: 80%;
         text-align: center;
         margin: 0;
-        margin-top:20px;
-        padding:10px;
+        margin-top: 20px;
+        padding: 10px;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
         color: #59f9b4;
@@ -47,98 +45,90 @@
         justify-content: center;
         align-items: center;
         div {
-          width:40%;
+          width: 40%;
           height: 2px;
           background-color: white;
           border-radius: 5px;
         }
       }
-     .interestContainer {
-      width: 100%;
-      display: flex;
-      justify-content: space-evenly;
-      height: 70px;
-      .iconImageContainer {
-        position:relative;
-        margin:0;
-        padding:0;
-        width: 70px;
+      .interestContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
         height: 70px;
-        z-index:99;
-        cursor:pointer;
+        .iconImageContainer {
+          position: relative;
+          margin: 0;
+          padding: 0;
+          width: 70px;
+          height: 70px;
+          z-index: 99;
+          cursor: pointer;
 
-        &:hover .intrestIcon{
-          display:none;
-      
+          &:hover .intrestIcon {
+            display: none;
+          }
+
+          &:hover + .iconText {
+            display: block;
+            color: #59f9b4;
+          }
+
+          .intrestIcon {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 70px;
+            height: 70px;
+          }
         }
-        
-
-        &:hover + .iconText{
-        
-          display:block;
-          color:#59f9b4;
-      
+        .iconText {
+          position: relative;
+          margin-top: -60px;
+          display: none;
+          color: white;
+          width: 70px;
+          height: 90px;
+          font-size: 0.9rem;
+          text-align: center;
         }
-       
-      .intrestIcon {
-        position: relative;
-        margin:0;
-        padding:0;
-        width: 70px;
-        height:70px;
       }
-    }
-      .iconText {
-        position:relative;
-        margin-top: -60px;
-        display:none;
-        color:white;
-        width:70px;
-        height: 90px;
-        font-size: 0.9rem;
-        text-align: center;
-      }
-     }
-
     }
     .imageContainer {
       margin: 0;
       height: 350px;
       width: auto;
-   
- 
-   
+
       .imgCoverDesktop {
-    
         height: 350px;
         width: auto;
         opacity: 0.87;
         border-radius: 5%;
-        display: block;;
-     
+        display: block;
       }
       .imgCoverTablet {
-        display:none;
+        display: none;
         height: 350px;
         width: auto;
         opacity: 0.87;
         border-radius: 5%;
-      
-     
       }
     }
   }
 }
 
-.buttonMailContainer {
+#iconCar {
+  width: 90px;
+}
 
+.buttonMailContainer {
   button {
-    margin-bottom:20px;
+    margin-bottom: 20px;
     padding: 10px 20px 10px 20px;
     border-radius: 15px;
     background-color: white;
-    border:none;
-    color:#394B41;
+    border: none;
+    color: #394b41;
     font-size: 1.2rem;
     &:hover {
       background-color: #59f9b4;
@@ -146,189 +136,149 @@
   }
 }
 
-
-@media (min-width:600px) and (max-width:900px) {
+@media (min-width: 600px) and (max-width: 900px) {
   .containerCover {
-    
-  
     .containerPresentation {
-  
       flex-direction: column-reverse;
       justify-content: space-evenly;
- 
+
       .containerH1 {
-        width:80%;
-        padding-bottom:20px;
-   
+        width: 80%;
+        padding-bottom: 20px;
+
         h1 {
-          
           font-size: 1.4rem;
         }
-  
-        .divider {
-     
-          div {
- 
-          }
-        }
-       .interestContainer {
 
-        .iconImageContainer {
-     
-  
-          &:hover .intrestIcon{
-            display: none;
-        
+        .divider {
+          div {
           }
-          
-  
-          &:hover + .iconText{
+        }
+        .interestContainer {
+          .iconImageContainer {
+            &:hover .intrestIcon {
+              display: none;
+            }
+
+            &:hover + .iconText {
+              display: none;
+            }
+
+            .intrestIcon {
+              width: 50px;
+              height: 50px;
+            }
+          }
+          .iconText {
             display: none;
           }
-         
-        .intrestIcon {
-          width: 50px;
-          height: 50px;
         }
-      }
-        .iconText {
-display: none;
-        }
-       }
-  
       }
       .imageContainer {
         display: flex;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
-        
-        width:80%;
-     
+
+        width: 80%;
+
         .imgCoverDesktop {
-          display:none;
-     
-  
-       
+          display: none;
         }
         .imgCoverTablet {
           display: block;
           width: 50%;
           height: auto;
-  
-       
         }
       }
     }
   }
-  
-  .buttonMailContainer {
-  
-    button {
 
-      }
+  .buttonMailContainer {
+    button {
     }
   }
-  
-  @media screen and (max-width:599px){
-    .containerCover {
-       
-  
-      .containerPresentation {
-    
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-   
-        .containerH1 {
-          height:50%;
-          width:90%;
-          padding-bottom:10px;
-          margin-bottom: 40px;
-     
-          h1 {
-         font-size: 1.3rem;
-         line-height: 25px;
-    
-          }
-    
-          .divider {
-            height: 20px;
-            div {
-   
-            }
-          }
-         .interestContainer {
+}
 
-         height: 50px;
-           article {
+@media screen and (max-width: 599px) {
+  .containerCover {
+    .containerPresentation {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+
+      .containerH1 {
+        height: 50%;
+        width: 90%;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+
+        h1 {
+          font-size: 1.3rem;
+          line-height: 25px;
+        }
+
+        .divider {
+          height: 20px;
+          div {
+          }
+        }
+        .interestContainer {
+          height: 50px;
+          pointer-events: none;
+          article {
             height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-  
-          .iconImageContainer {
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       width: 35px;
-       height: 35%;
-    
-            &:hover .intrestIcon{
-    
+
+            .iconImageContainer {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 35px;
+              height: 35%;
+
+              &:hover .intrestIcon {
+                display: none;
+              }
+
+              &:hover + .iconText {
+                display: none;
+              }
+
+              .intrestIcon {
+                width: 50px;
+                height: 50px;
+              }
+            }
+            .iconText {
               display: none;
             }
-            
-    
-            &:hover + .iconText{
-              display: none;
-            }
-           
-          .intrestIcon {
-width: 50px;
-height: 50px;
           }
         }
-          .iconText {
-            display: none;
-          }
-         }
-        }
-        }
-        .imageContainer {
+      }
+      .imageContainer {
         display: flex;
         align-items: center;
         justify-content: center;
-       
-          .imgCoverDesktop {
-            display:none;
-       
-    
-         
-          }
-          .imgCoverTablet {
-       
-    
-        
-              display: block;
-              width: 60%;
-              height: auto;
-      
-           
-            
-          }
-        }
-      }
-    }
-    
-    .buttonMailContainer {
-    
-      button {
-        margin-top: 10px;
-  font-size: 0.8rem;
-        }
-      }
-    }
-    
 
-  
+        .imgCoverDesktop {
+          display: none;
+        }
+        .imgCoverTablet {
+          display: block;
+          width: 60%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .buttonMailContainer {
+    button {
+      margin-top: 10px;
+      font-size: 0.8rem;
+    }
+  }
+}

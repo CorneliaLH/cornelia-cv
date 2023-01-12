@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import "./scss/layout.css";
 
@@ -13,12 +13,15 @@ export function Layoutcomponent() {
     "Kontakt",
   ];
 
-
   let listItem = menuArray.map(function (menuLink: string, i) {
     return (
-      <li className='nav__item' key={i} onClick={()=>{
-        setMenuOpen(false)
-      }}>
+      <li
+        className='nav__item'
+        key={i}
+        onClick={() => {
+          setMenuOpen(false);
+        }}
+      >
         <a href={"#" + menuLink} className='nav__link'>
           {menuLink}
         </a>
@@ -26,40 +29,37 @@ export function Layoutcomponent() {
     );
   });
 
-
   return (
     <>
-    <div className="containerCoverImage"></div>
-    <div className="containerPage">
-      <header className='header'>
-        <div
-          className='menu'
-          onClick={() => {
-         
-            if (!menuOpen) {
-              document.querySelector(".menu")?.classList.add("open");
-              setMenuOpen(true);
-            } else {
-              document.querySelector(".menu")?.classList.remove("open");
-              setMenuOpen(false);
-            }
-          }}
-        >
-          <div className='menu__burger' id='menuButton'></div>
-        </div>
+      <div className='containerCoverImage'></div>
+      <div className='containerPage'>
+        <header className='header'>
+          <div
+            className='menu'
+            onClick={() => {
+              if (!menuOpen) {
+                document.querySelector(".menu")?.classList.add("open");
+                setMenuOpen(true);
+              } else {
+                document.querySelector(".menu")?.classList.remove("open");
+                setMenuOpen(false);
+              }
+            }}
+          >
+            <div className='menu__burger' id='menuButton'></div>
+          </div>
 
-        {menuOpen ? (
-          <nav className='nav' id='navbar'>
-            <ul className='nav__list'>{listItem}</ul>
-          </nav>
-        ) : (
-          <></>
-        )}
-      </header>
-      <main className='main'>
-        <Outlet></Outlet>
-      </main>
-      
+          {menuOpen ? (
+            <nav className='nav' id='navbar'>
+              <ul className='nav__list'>{listItem}</ul>
+            </nav>
+          ) : (
+            <></>
+          )}
+        </header>
+        <main className='main'>
+          <Outlet></Outlet>
+        </main>
       </div>
     </>
   );
