@@ -32,23 +32,29 @@ export function Backgroundcomponent() {
     },
     {
       heading: "Angular",
-      bar: "50",
+      bar: "45",
       id: "progress-bar6",
     },
+    ,
     {
-      heading: "MySQL",
-      bar: "50",
+      heading: "Nodejs",
+      bar: "49",
       id: "progress-bar7",
     },
     {
-      heading: "NoSQL",
-      bar: "50",
+      heading: "MySQL",
+      bar: "42",
       id: "progress-bar8",
     },
     {
-      heading: "Hubl",
-      bar: "40",
+      heading: "NoSQL",
+      bar: "53",
       id: "progress-bar9",
+    },
+    {
+      heading: "Hubl",
+      bar: "39",
+      id: "progress-bar10",
     },
   ];
 
@@ -87,15 +93,18 @@ export function Backgroundcomponent() {
           <article className='articleSkills' id='articleSkills'>
             <ul className='skillsBarContainer1'>
               {arraySkills.map((skillitem) => (
-                <li className='skillsBarContainer2' key={skillitem.id}>
-                  <h3>{skillitem.heading}</h3>
+                <li className='skillsBarContainer2' key={skillitem?.id}>
+                  <h3>{skillitem?.heading}</h3>
                   <div className='progress'>
                     <div
                       className='progress-bar'
-                      id={skillitem.id}
+                      id={skillitem?.id}
                       style={
                         progressBoolean
-                          ? { width: skillitem.bar + "%", transition: "all 2s" }
+                          ? {
+                              width: skillitem?.bar + "%",
+                              transition: "all 2s",
+                            }
                           : { width: "0%", transition: "all 2s" }
                       }
                     ></div>
