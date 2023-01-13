@@ -20,6 +20,7 @@ export function Layoutcomponent() {
         key={i}
         onClick={() => {
           setMenuOpen(false);
+          document.getElementById("menu")?.classList.remove("open");
         }}
       >
         <a href={"#" + menuLink} className='nav__link'>
@@ -36,6 +37,7 @@ export function Layoutcomponent() {
         <header className='header'>
           <div
             className='menu'
+            id='menu'
             onClick={() => {
               if (!menuOpen) {
                 document.querySelector(".menu")?.classList.add("open");
