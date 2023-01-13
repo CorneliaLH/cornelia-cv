@@ -4,7 +4,7 @@ export function Educationcomponent() {
   let arrayEducation = [
     {
       heading: "Front End developer",
-      time: "Medieinstitutet Yrkeshögskola / Från oktober 2021 med förväntad examen maj 2023",
+      time: "Medieinstitutet Yrkeshögskola / Från oktober 2021 med förväntad examen juni 2023",
       text: `Om utbildningen: Utbildningen Front End Developer ger kompetens att använda den webbteknik som krävs för att producera avancerade webbplatser, detta inkluderar JavaScript, versionshantering, ramverk, html, CSS, webbdesign och användbarhet/UX. Utbildningen innehåller allt från programmeringsspråk till kunskaper i utveckling av mobila webbapplikationer.`,
       id: "education1",
       id1: "eduCon1",
