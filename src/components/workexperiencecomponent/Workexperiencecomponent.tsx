@@ -4,7 +4,8 @@ export function Workexperiencecomponent() {
   let workArray = [
     {
       title: `TeQflo`,
-      item1: "Front-end utvecklare (LIA) / Pågående, start oktober 2022",
+      item1:
+        "Front-end utvecklare (LIA) / Från oktober 2022 till december 2022",
       item2: `Fått erfarenhet att arbeta som konsult inom Webbutveckling. Arbetat i Hubspot CMS, och med Hubl och Javascript.`,
       id: "work1",
       idcont: "workCont1",
