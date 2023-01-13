@@ -155,6 +155,7 @@
           }
         }
         .interestContainer {
+          pointer-events: none;
           .iconImageContainer {
             &:hover .intrestIcon {
               display: none;
