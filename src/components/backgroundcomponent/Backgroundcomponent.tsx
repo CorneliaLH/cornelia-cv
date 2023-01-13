@@ -35,7 +35,6 @@ export function Backgroundcomponent() {
       bar: "45",
       id: "progress-bar6",
     },
-    ,
     {
       heading: "Node.js",
       bar: "49",
