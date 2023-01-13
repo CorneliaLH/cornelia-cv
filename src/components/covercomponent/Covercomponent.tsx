@@ -62,7 +62,14 @@ export function Covercomponent() {
               <div></div>
             </div>
             <div className='buttonMailContainer'>
-              <button className='button'>Maila mig</button>
+              <button
+                className='button'
+                onClick={() =>
+                  (window.location.href = "mailto:cornelialisaharder@gmail.com")
+                }
+              >
+                Maila mig
+              </button>
             </div>
           </section>
           <div className='imageContainer'>
