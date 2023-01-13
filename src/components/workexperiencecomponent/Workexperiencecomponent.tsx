@@ -41,7 +41,7 @@ export function Workexperiencecomponent() {
   ];
 
   function moreInformationWork(workId: any, workIdCont: any, workText: any) {
-    let educationContainer = document.getElementById(workIdCont);
+    let workexperienceContainer = document.getElementById(workIdCont);
 
     if (document.getElementById(workId + 2) === null) {
       for (let i = 0; i < workArray.length; i++) {
@@ -52,7 +52,7 @@ export function Workexperiencecomponent() {
             newText.innerText = workText;
             newText.id = workId + 2;
             newText.className = "workMoreText";
-            educationContainer?.append(newText);
+            workexperienceContainer?.append(newText);
           }
         }
       }
@@ -69,24 +69,30 @@ export function Workexperiencecomponent() {
           <h2 className='workHeadingh3'>Arbetslivserfarenhet</h2>
           <div className='workText'>
             {workArray.map((work) => (
-              <ul key={work.title} id={work.idcont}>
-                <li className='workTitle'>
+              <div key={work.title}>
+                {" "}
+                <h3
+                  className='workTitle'
+                  onClick={() => {
+                    moreInformationWork(work.id, work.idcont, work.item2);
+                  }}
+                >
                   {work.title}{" "}
                   <svg
+                    className='knowMoreIcon'
                     xmlns='http://www.w3.org/2000/svg'
-                    width='20'
-                    height='20'
+                    width='35'
+                    height='35'
                     viewBox='0 0 16 16'
                     fill='#59f9b4'
-                    onClick={() => {
-                      moreInformationWork(work.id, work.idcont, work.item2);
-                    }}
                   >
                     <path d='M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z' />
                   </svg>
-                </li>
-                <li className='workInfo'>{work.item1}</li>
-              </ul>
+                </h3>
+                <ul id={work.idcont} className='containerWork'>
+                  <li className='workInfo'>{work.item1}</li>
+                </ul>
+              </div>
             ))}
           </div>
         </div>

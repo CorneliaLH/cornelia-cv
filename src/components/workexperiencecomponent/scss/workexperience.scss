@@ -27,28 +27,38 @@
     .workText {
       width: 50%;
       padding: 0;
-
-      ul {
-        color: white;
-        margin: 0;
-        padding: 0;
-
+      div {
         .workTitle {
           list-style-type: none;
           font-size: 1.4rem;
-          margin-top: 5px;
-        }
-        .workInfo {
-          list-style-type: none;
-          font-style: italic;
-        }
-
-        .workMoreText {
-          list-style-type: none;
-          color: #bcffe2;
+          font-weight: 400;
+          margin: 0;
+          margin-top: 10px;
+          color: white;
+          cursor: pointer;
+          .knowMoreIcon {
+            position: relative;
+            top: 10px;
+          }
         }
       }
     }
+  }
+}
+
+.containerWork {
+  color: white;
+  margin: 0;
+  padding: 0;
+
+  .workInfo {
+    list-style-type: none;
+    font-style: italic;
+  }
+
+  .workMoreText {
+    list-style-type: none;
+    color: #bcffe2;
   }
 }
 
@@ -66,16 +76,16 @@
       width: 80%;
       box-sizing: border-box;
       .workHeadingh3 {
+        font-size: 1.2rem;
+        width: 40%;
       }
 
       .workText {
-        ul {
+        margin-top: -10px;
+        width: 60%;
+        div {
           .workTitle {
-          }
-          .workInfo {
-          }
-
-          .workMoreText {
+            font-size: 1.2rem;
           }
         }
       }
@@ -99,25 +109,27 @@
       .workText {
         width: 90%;
         font-size: 0.8rem;
-
-        ul {
+        div {
           .workTitle {
-            font-size: 0.8rem;
-            svg {
-              position: relative;
-              top: 3px;
-              height: 16px;
-              width: 16px;
+            font-size: 0.9rem;
+            .knowMoreIcon {
+              width: 30px;
+              height: 30px;
             }
           }
-          .workInfo {
-            font-size: 0.8rem;
-          }
-
-          .workMoreText {
-            font-size: 0.8rem;
-          }
         }
+      }
+    }
+
+    .containerWork {
+      font-size: 0.8rem;
+
+      .workInfo {
+        font-size: 0.8rem;
+      }
+
+      .workMoreText {
+        font-size: 0.8rem;
       }
     }
   }

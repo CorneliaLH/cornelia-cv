@@ -71,7 +71,7 @@ export function Educationcomponent() {
           <section className='educationText'>
             {arrayEducation.map((education) => (
               <article key={education.heading} id={education.id}>
-                <h2
+                <h3
                   className='educationTitle'
                   onClick={() => {
                     moreInformationEducation(
@@ -84,9 +84,10 @@ export function Educationcomponent() {
                   {education.heading}{" "}
                   {education.text ? (
                     <svg
+                      className='knowMoreIcon'
                       xmlns='http://www.w3.org/2000/svg'
-                      width='16'
-                      height='16'
+                      width='35'
+                      height='35'
                       viewBox='0 0 16 16'
                       fill='#59f9b4'
                     >
@@ -95,7 +96,7 @@ export function Educationcomponent() {
                   ) : (
                     ""
                   )}
-                </h2>
+                </h3>
                 <ul id={education.id1}>
                   <li className='educationTime'>{education.time}</li>
                 </ul>
