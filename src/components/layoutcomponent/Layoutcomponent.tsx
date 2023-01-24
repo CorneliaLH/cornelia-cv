@@ -35,21 +35,33 @@ export function Layoutcomponent() {
       <div className='containerCoverImage'></div>
       <div className='containerPage'>
         <header className='header'>
-          <div
+          <button
             className='menu'
             id='menu'
+            aria-expanded='false'
+            aria-label='Menu'
             onClick={() => {
               if (!menuOpen) {
                 document.querySelector(".menu")?.classList.add("open");
+                document
+                  .querySelector(".menu")
+                  ?.setAttribute("aria-expanded", "true");
                 setMenuOpen(true);
               } else {
                 document.querySelector(".menu")?.classList.remove("open");
+                document
+                  .querySelector(".menu")
+                  ?.setAttribute("aria-expanded", "false");
                 setMenuOpen(false);
               }
             }}
           >
-            <div className='menu__burger' id='menuButton'></div>
-          </div>
+            <div
+              className='menu__burger'
+              id='menuButton'
+              aria-hidden='true'
+            ></div>
+          </button>
 
           {menuOpen ? (
             <nav className='nav' id='navbar'>
