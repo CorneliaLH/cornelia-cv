@@ -125,25 +125,36 @@ export function Workexperiencecomponent({ lang }: any) {
     ];
   }
 
-  function moreInformationWork(workId: any, workIdCont: any, workText: any) {
+  function moreInformationWork(
+    workId: any,
+    workIdCont: any,
+    workText: any,
+    workTime: any
+  ) {
     let workexperienceContainer = document.getElementById(workIdCont);
 
     if (document.getElementById(workId + 2) === null) {
       for (let i = 0; i < workArray.length; i++) {
         if (workArray[i].id === workId) {
-          let newText = document.createElement("li");
-
+          let newText1 = document.createElement("li");
+          let newText2 = document.createElement("li");
           if (workText !== undefined) {
-            newText.innerText = workText;
-            newText.id = workId + 2;
-            newText.className = "workMoreText";
-            workexperienceContainer?.append(newText);
+            newText1.innerText = workTime;
+            newText1.id = workId + 3;
+            newText1.className = "educationTime";
+            workexperienceContainer?.append(newText1);
+            newText2.innerText = workText;
+            newText2.id = workId + 2;
+            newText2.className = "workMoreText";
+            workexperienceContainer?.append(newText2);
           }
         }
       }
     } else {
       let elementToRemove2 = document.getElementById(workId + 2);
+      let elementToRemove3 = document.getElementById(workId + 3);
       elementToRemove2?.remove();
+      elementToRemove3?.remove();
     }
   }
 
@@ -162,7 +173,12 @@ export function Workexperiencecomponent({ lang }: any) {
                 <h3
                   className='workTitle'
                   onClick={() => {
-                    moreInformationWork(work.id, work.idcont, work.item2);
+                    moreInformationWork(
+                      work.id,
+                      work.idcont,
+                      work.item2,
+                      work.item1
+                    );
                   }}
                 >
                   {work.title}{" "}
@@ -177,9 +193,7 @@ export function Workexperiencecomponent({ lang }: any) {
                     <path d='M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z' />
                   </svg>
                 </h3>
-                <ul id={work.idcont} className='containerWork'>
-                  <li className='workInfo'>{work.item1}</li>
-                </ul>
+                <ul id={work.idcont} className='containerWork'></ul>
               </div>
             ))}
           </div>

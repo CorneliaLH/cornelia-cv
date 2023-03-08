@@ -91,26 +91,34 @@ export function Educationcomponent({ lang }: any) {
   function moreInformationEducation(
     idFromClick: any,
     idCont: any,
-    educationText: any
+    educationText: any,
+    educationTime: any
   ) {
     let educationContainer = document.getElementById(idCont);
 
     if (document.getElementById(idFromClick + 2) === null) {
       for (let i = 0; i < arrayEducation.length; i++) {
         if (arrayEducation[i].id === idFromClick) {
-          let newText = document.createElement("li");
+          let newText1 = document.createElement("li");
+          let newText2 = document.createElement("li");
 
           if (educationText !== undefined) {
-            newText.innerText = educationText;
-            newText.id = idFromClick + 2;
-            newText.className = "educationMoreText";
-            educationContainer?.append(newText);
+            newText1.innerText = educationTime;
+            newText1.id = idFromClick + 3;
+            newText1.className = "educationTime";
+            educationContainer?.append(newText1);
+            newText2.innerText = educationText;
+            newText2.id = idFromClick + 2;
+            newText2.className = "educationMoreText";
+            educationContainer?.append(newText2);
           }
         }
       }
     } else {
       let elementToRemove2 = document.getElementById(idFromClick + 2);
+      let elementToRemove3 = document.getElementById(idFromClick + 3);
       elementToRemove2?.remove();
+      elementToRemove3?.remove();
     }
   }
   return (
@@ -130,7 +138,8 @@ export function Educationcomponent({ lang }: any) {
                     moreInformationEducation(
                       education.id,
                       education.id1,
-                      education.text
+                      education.text,
+                      education.time
                     );
                   }}
                 >
@@ -150,9 +159,7 @@ export function Educationcomponent({ lang }: any) {
                     ""
                   )}
                 </h3>
-                <ul id={education.id1}>
-                  <li className='educationTime'>{education.time}</li>
-                </ul>
+                <ul id={education.id1}></ul>
               </article>
             ))}
           </section>
