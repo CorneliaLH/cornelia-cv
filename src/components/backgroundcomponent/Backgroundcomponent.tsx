@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./scss/background.css";
 
-export function Backgroundcomponent() {
+export function Backgroundcomponent({ lang }: any) {
   const [progressBoolean, setProgressBoolean] = useState(false);
 
   let arraySkills = [
@@ -79,14 +79,28 @@ export function Backgroundcomponent() {
     <>
       <div className='backgroundContainer' id='Front-end kunskaper'>
         <section className='backgroundArticleLeft'>
-          <h2 id='skillsHeading'>Front-end kunskaper (egenvärdering)</h2>
+          <h2 id='skillsHeading'>
+            {" "}
+            {lang === "se"
+              ? "Front-end kunskaper (egenvärdering)"
+              : "Front-end knowledge (self-evaluation)"}
+          </h2>
           <div className='scaleOptionsContainer'>
             <div className='scaleContainer'>
-              <p>Förlåt, vad sa du?</p>
-
-              <p>Absolut, det kan jag!</p>
-
-              <p>Jag är grym!</p>
+              {lang === "se" ? (
+                <>
+                  {" "}
+                  <p>Förlåt, vad sa du?</p>
+                  <p>Absolut, det kan jag!</p>
+                  <p>Jag är grym!</p>
+                </>
+              ) : (
+                <>
+                  <p>Sorry?</p>
+                  <p>Sure, I know that!</p>
+                  <p>I'm awesome!</p>
+                </>
+              )}
             </div>
           </div>
           <article className='articleSkills' id='articleSkills'>

@@ -5,19 +5,21 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-
 import { Maincomponent } from "./components/maincomponent/Maincomponent";
 import { Layoutcomponent } from "./components/layoutcomponent/Layoutcomponent";
+import { MainEngcomponent } from "./components/mainengcomponent/MainEngcomponent";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename ="/cornelia-cv">
+    <BrowserRouter basename='/cornelia-cv'>
       <Routes>
         <Route path='/' element={<Layoutcomponent />}>
           <Route index element={<Maincomponent />} />
+          <Route path='/en' element={<MainEngcomponent />} />
           {/* <Route path="*" element={<NotFound />}></Route> */}
         </Route>
       </Routes>

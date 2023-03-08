@@ -1,18 +1,66 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./scss/layout.css";
 
 export function Layoutcomponent() {
   const [menuOpen, setMenuOpen] = useState(false);
-  let menuArray = [
-    "Hem",
-    "Front-end kunskaper",
-    "Arbetslivserfarenhet",
-    "Utbildning",
-    "Socialt",
-    "Kontakt",
-  ];
+  const [update, setUpdate] = useState(false);
 
+  function LanguageSwitcher() {
+    return (
+      <div className='languageSwitch'>
+        {window.location.pathname === "/cornelia-cv/en" ? (
+          <Link
+            to='/'
+            onClick={() => {
+              if (update === false) {
+                setUpdate(true);
+              } else {
+                setUpdate(false);
+              }
+            }}
+          >
+            Svenska
+          </Link>
+        ) : (
+          <Link
+            to='/en'
+            onClick={() => {
+              if (update === false) {
+                setUpdate(true);
+              } else {
+                setUpdate(false);
+              }
+            }}
+          >
+            English
+          </Link>
+        )}
+      </div>
+    );
+  }
+
+  let menuArray;
+  if (window.location.pathname === "/cornelia-cv/en") {
+    menuArray = [
+      "Home",
+      "Front-end knowledge",
+      "Work experience",
+      "Education",
+      "Socials",
+      "Contact",
+    ];
+  } else {
+    menuArray = [
+      "Hem",
+      "Front-end kunskaper",
+      "Arbetslivserfarenhet",
+      "Utbildning",
+      "Socialt",
+      "Kontakt",
+    ];
+  }
   let listItem = menuArray.map(function (menuLink: string, i) {
     return (
       <li
@@ -35,6 +83,7 @@ export function Layoutcomponent() {
       <div className='containerCoverImage'></div>
       <div className='containerPage'>
         <header className='header'>
+          <LanguageSwitcher></LanguageSwitcher>
           <button
             className='menu'
             id='menu'

@@ -79,7 +79,7 @@
 .header {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.595);
+
   width: 100vw;
   .nav {
     position: fixed;
@@ -194,5 +194,23 @@
 
   .menu.open .menu__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
+  }
+}
+
+.languageSwitch {
+  height: 35px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: #59f9b4ae;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-left: 5px;
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
   }
 }

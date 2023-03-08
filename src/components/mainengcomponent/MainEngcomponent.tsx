@@ -8,18 +8,16 @@ import { Workexperiencecomponent } from "../workexperiencecomponent/Workexperien
 
 import "./scss/main.css";
 
-export function Maincomponent() {
+export function MainEngcomponent() {
   return (
     <>
-      {<Covercomponent lang={"se"} />}
-
-      {<Backgroundcomponent lang={"se"} />}
-      {<Workexperiencecomponent lang={"se"} />}
-      {<Educationcomponent lang={"se"} />}
-
-      {<Languagecomponent lang={"se"} />}
-      {<Aboutmecomponent lang={"se"} />}
-      {<Footercomponent lang={"se"} />}
+      {<Covercomponent lang={"en"} />}
+      {<Backgroundcomponent lang={"en"} />}
+      {<Workexperiencecomponent lang={"en"} />}
+      {<Educationcomponent lang={"en"} />}
+      {<Languagecomponent lang={"en"} />}
+      {<Aboutmecomponent lang={"en"} />}
+      {<Footercomponent lang={"en"} />}
     </>
   );
 }

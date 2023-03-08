@@ -1,41 +1,92 @@
 import "./scss/education.css";
 
-export function Educationcomponent() {
-  let arrayEducation = [
-    {
-      heading: "Front End developer",
-      time: "Medieinstitutet Yrkeshögskola / Från oktober 2021 med förväntad examen juni 2023",
-      text: `Om utbildningen: Utbildningen Front End Developer ger kompetens att använda den webbteknik som krävs för att producera avancerade webbplatser, detta inkluderar JavaScript, versionshantering, ramverk, html, CSS, webbdesign och användbarhet/UX. Utbildningen innehåller allt från programmeringsspråk till kunskaper i utveckling av mobila webbapplikationer.`,
-      id: "education1",
-      id1: "eduCon1",
-    },
-    {
-      heading: "Specialisttandläkarutbildning",
-      time: "Köpenhamns universitet / Från september 2013 till oktober 2016",
-      text: `Om utbildningen: Utbildningen omfattar både klinisk och teoretisk undervisning i tandreglering, praktik, obligatoriska kurser samt avslutande examination. Utbildnignen har även medfört att jag nästan är flytande i tal och skrift i det danska språket.`,
-      id: "education2",
-      id1: "eduCon2",
-    },
-    {
-      heading: "Tandläkarutbildning",
-      time: "Malmö högskola / Från oktober 2005 till juni 2010",
-      text: `Om utbildningen: Tandläkarutbildningen bedrevs enligt PBL, problembaserat lärande, vilket innebär att studierna baseras på fallstudier och problemlösning.`,
-      id: "education3",
-      id1: "eduCon3",
-    },
-    {
-      heading: "Engelska A",
-      time: "Lunds universitet / Från augusti 2004 till december 2004",
-      id: "education4",
-      id1: "eduCon4",
-    },
-    {
-      heading: "Juridisk översiktskurs",
-      time: "Lunds universitet / Från mars 2005 till juni 2005",
-      id: "education5",
-      id1: "eduCon5",
-    },
-  ];
+export function Educationcomponent({ lang }: any) {
+  let arrayEducation: any;
+  if (lang === "en") {
+    arrayEducation = [
+      {
+        heading: "Front End developer",
+        time: "Medieinstitutet Vocational College / From October 2021 with expected graduation in June 2023",
+        text: "About the education: The Front End Developer education provides competence to use the web technology required to produce advanced websites, including JavaScript, version control, frameworks, HTML, CSS, web design, and usability/UX. The education includes everything from programming languages to knowledge in developing mobile web applications.",
+        id: "education1",
+        id1: "eduCon1",
+      },
+      {
+        heading: "Specialist dental education",
+        time: "University of Copenhagen / From September 2013 to October 2016",
+        text: "About the education: The education includes both clinical and theoretical teaching in orthodontics, practice, mandatory courses, and final examination. The education has also resulted in me being almost fluent in speaking and writing the Danish language.",
+        id: "education2",
+        id1: "eduCon2",
+      },
+      {
+        heading: "Dental education",
+        time: "Malmö University / From October 2005 to June 2010",
+        text: "About the education: The dental education was conducted according to PBL, problem-based learning, which means that the studies are based on case studies and problem solving.",
+        id: "education3",
+        id1: "eduCon3",
+      },
+      {
+        heading: "English A",
+        time: "Lund University / From August 2004 to December 2004",
+        id: "education4",
+        id1: "eduCon4",
+      },
+      {
+        heading: "Legal overview course",
+        time: "Lund University / From March 2005 to June 2005",
+        id: "education5",
+        id1: "eduCon5",
+      },
+      {
+        heading: "Rotary exchange student in Australia",
+        time: "St Hildas School for Girls / From June 1999 to June 2000",
+        id: "education6",
+        id1: "eduCon6",
+      },
+    ];
+  } else {
+    arrayEducation = [
+      {
+        heading: "Front End developer",
+        time: "Medieinstitutet Yrkeshögskola / Från oktober 2021 med förväntad examen juni 2023",
+        text: `Om utbildningen: Utbildningen Front End Developer ger kompetens att använda den webbteknik som krävs för att producera avancerade webbplatser, detta inkluderar JavaScript, versionshantering, ramverk, html, CSS, webbdesign och användbarhet/UX. Utbildningen innehåller allt från programmeringsspråk till kunskaper i utveckling av mobila webbapplikationer.`,
+        id: "education1",
+        id1: "eduCon1",
+      },
+      {
+        heading: "Specialisttandläkarutbildning",
+        time: "Köpenhamns universitet / Från september 2013 till oktober 2016",
+        text: `Om utbildningen: Utbildningen omfattar både klinisk och teoretisk undervisning i tandreglering, praktik, obligatoriska kurser samt avslutande examination. Utbildnignen har även medfört att jag nästan är flytande i tal och skrift i det danska språket.`,
+        id: "education2",
+        id1: "eduCon2",
+      },
+      {
+        heading: "Tandläkarutbildning",
+        time: "Malmö högskola / Från oktober 2005 till juni 2010",
+        text: `Om utbildningen: Tandläkarutbildningen bedrevs enligt PBL, problembaserat lärande, vilket innebär att studierna baseras på fallstudier och problemlösning.`,
+        id: "education3",
+        id1: "eduCon3",
+      },
+      {
+        heading: "Engelska A",
+        time: "Lunds universitet / Från augusti 2004 till december 2004",
+        id: "education4",
+        id1: "eduCon4",
+      },
+      {
+        heading: "Juridisk översiktskurs",
+        time: "Lunds universitet / Från mars 2005 till juni 2005",
+        id: "education5",
+        id1: "eduCon5",
+      },
+      {
+        heading: "Rotary utbytesstudent i Australien",
+        time: "St Hildas School for Girls / Från juni 1999 till juni 2000",
+        id: "education6",
+        id1: "eduCon6",
+      },
+    ];
+  }
 
   function moreInformationEducation(
     idFromClick: any,
@@ -66,10 +117,12 @@ export function Educationcomponent() {
     <>
       <div className='educationContainer' id='Utbildning'>
         <div className='education'>
-          <h2 className='educationHeadingh3'>Utbildning</h2>
+          <h2 className='educationHeadingh3'>
+            {lang === "se" ? "Utbildning" : "Education"}
+          </h2>
 
           <section className='educationText'>
-            {arrayEducation.map((education) => (
+            {arrayEducation.map((education: any) => (
               <article key={education.heading} id={education.id}>
                 <h3
                   className='educationTitle'

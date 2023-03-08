@@ -3,7 +3,7 @@ import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.svg";
 import envelope from "../../images/envelope.svg";
 
-export function Footercomponent() {
+export function Footercomponent({ lang }: any) {
   return (
     <>
       <footer className='footer' id='Socialt'>
