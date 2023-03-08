@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Maincomponent } from "./components/maincomponent/Maincomponent";
 import { Layoutcomponent } from "./components/layoutcomponent/Layoutcomponent";
 import { MainEngcomponent } from "./components/mainengcomponent/MainEngcomponent";
+import { NotFoundcomponent } from "./components/notfoundcomponent/NotFoundcomponent";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,8 +21,8 @@ root.render(
         <Route path='/' element={<Layoutcomponent />}>
           <Route index element={<Maincomponent />} />
           <Route path='/en' element={<MainEngcomponent />} />
-          {/* <Route path="*" element={<NotFound />}></Route> */}
         </Route>
+        <Route path='*' element={<NotFoundcomponent />}></Route>
       </Routes>
     </BrowserRouter>
     <App />
