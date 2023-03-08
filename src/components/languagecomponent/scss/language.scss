@@ -90,7 +90,7 @@ input[type="radio"]:checked:after {
       .languageHeading {
         width: 100%;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
       }
 
       .radioContainer {
@@ -98,6 +98,14 @@ input[type="radio"]:checked:after {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .languageArticle {
+          margin-top: 20px;
+
+          .languageRadioHeading {
+            font-size: 0.9rem;
+          }
+        }
       }
     }
   }
