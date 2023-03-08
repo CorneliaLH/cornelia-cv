@@ -12,7 +12,7 @@ export function Layoutcomponent() {
   function LanguageSwitcher() {
     return (
       <div className='languageSwitch'>
-        {window.location.pathname === "/cornelia-cv/en" ? (
+        {window.location.pathname === "/en" ? (
           <Link
             to='/'
             onClick={() => {
@@ -44,7 +44,7 @@ export function Layoutcomponent() {
   }
 
   let menuArray;
-  if (window.location.pathname === "/cornelia-cv/en") {
+  if (window.location.pathname === "/en") {
     menuArray = [
       "Home",
       "Front-end knowledge",
