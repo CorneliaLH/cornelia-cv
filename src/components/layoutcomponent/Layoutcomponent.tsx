@@ -7,10 +7,12 @@ export function Layoutcomponent() {
   const [update, setUpdate] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // URL has to change to /en to work in deploy
+
   function LanguageSwitcher() {
     return (
       <div className='languageSwitch'>
-        {window.location.pathname === "/en" ? (
+        {window.location.pathname === "/cornelia-cv/en" ? (
           <Link
             to='/'
             onClick={() => {
@@ -42,7 +44,7 @@ export function Layoutcomponent() {
   }
 
   let menuArray;
-  if (window.location.pathname === "/en") {
+  if (window.location.pathname === "/cornelia-cv/en") {
     menuArray = [
       "Home",
       "Front-end knowledge",

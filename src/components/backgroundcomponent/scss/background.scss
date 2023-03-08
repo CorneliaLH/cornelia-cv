@@ -132,7 +132,7 @@
 
   .skillsBarContainer1 {
     .skillsBarContainer2 {
-      h4 {
+      h3 {
       }
     }
   }
@@ -147,6 +147,7 @@
 
 @media screen and (max-width: 600px) {
   .backgroundContainer {
+    margin-top: 110vh;
     .backgroundArticleLeft {
       padding: 10px;
       width: 90%;
@@ -176,7 +177,7 @@
       justify-content: space-evenly;
       width: 100%;
 
-      h4 {
+      h3 {
         font-size: 0.8rem;
       }
     }

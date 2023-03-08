@@ -210,75 +210,93 @@
 
 @media screen and (max-width: 599px) {
   .containerCover {
+    min-height: 110vh;
+    height: fit-content;
+    align-items: center;
     .containerPresentation {
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
       margin: 0;
-
+      width: 100%;
+      height: fit-content;
       .containerH1 {
-        height: 50%;
+        min-height: 30vh;
+        height: 80vh;
         width: 90%;
         padding-bottom: 10px;
         margin-bottom: 40px;
-
-        h1 {
-          font-size: 1.3rem;
-          line-height: 25px;
-        }
-
-        .divider {
-          height: 20px;
-          div {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        .containerPresText {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          h1 {
+            font-size: 1.1rem;
+            line-height: 25px;
+            padding: 0px;
           }
-        }
-        .interestContainer {
-          height: 50px;
-          pointer-events: none;
-          article {
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
-            .iconImageContainer {
+          .divider {
+            height: 20px;
+            div {
+            }
+          }
+          .interestContainer {
+            height: 50px;
+            pointer-events: none;
+            article {
+              height: 50px;
               display: flex;
               justify-content: center;
               align-items: center;
-              width: 35px;
-              height: 35%;
 
-              &:hover .intrestIcon {
+              .iconImageContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 35px;
+                height: 35%;
+
+                &:hover .intrestIcon {
+                  display: none;
+                }
+
+                &:hover + .iconText {
+                  display: none;
+                }
+
+                .intrestIcon {
+                  width: 50px;
+                  height: 50px;
+                }
+
+                #iconCar {
+                  width: 50px;
+                }
+              }
+              .iconText {
                 display: none;
               }
-
-              &:hover + .iconText {
-                display: none;
-              }
-
-              .intrestIcon {
-                width: 50px;
-                height: 50px;
-              }
-            }
-            .iconText {
-              display: none;
             }
           }
         }
-      }
-      .imageContainer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .imageContainer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0px;
 
-        .imgCoverDesktop {
-          display: none;
-        }
-        .imgCoverTablet {
-          display: block;
-          width: 60%;
-          height: auto;
+          .imgCoverDesktop {
+            display: none;
+          }
+          .imgCoverTablet {
+            display: block;
+            width: 80%;
+            height: auto;
+          }
         }
       }
     }

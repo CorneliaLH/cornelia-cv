@@ -79,3 +79,25 @@ input[type="radio"]:checked:after {
   visibility: visible;
   border: 2px solid white;
 }
+
+@media screen and (max-width: 599px) {
+  .languageContainer {
+    margin-bottom: 20vh;
+    .languageBox {
+      width: 90%;
+      flex-direction: column;
+
+      .languageHeading {
+        width: 100%;
+        text-align: center;
+      }
+
+      .radioContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
