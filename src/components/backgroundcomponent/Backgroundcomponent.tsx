@@ -96,9 +96,9 @@ export function Backgroundcomponent({ lang }: any) {
                 </>
               ) : (
                 <>
-                  <p>Sorry, what did you say?</p>
-                  <p>Sure, I know that!</p>
-                  <p>I'm!</p>
+                  <p>Pardon?</p>
+                  <p>Sure, I know some!</p>
+                  <p>I'm awesome!</p>
                 </>
               )}
             </div>
