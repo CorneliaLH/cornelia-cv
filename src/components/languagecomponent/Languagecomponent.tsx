@@ -51,34 +51,38 @@ export function Languagecomponent({ lang }: any) {
 
           <div className='radioContainer'>
             {languageArray.map((item: any) => {
-              console.log(item.nrChecked);
               return (
-                <article className='languageArticle'>
+                <article key={item.language} className='languageArticle'>
                   <h3 className='languageRadioHeading'>{item.language}</h3>
                   <div className='inputRadio'>
                     <input
+                      aria-label='radiobutton to snow languageskills'
                       type='radio'
-                      checked={item.nrChecked >= 1 ? true : false}
+                      defaultChecked={item.nrChecked >= 1 ? true : false}
                     ></input>
 
                     <input
+                      aria-label='radiobutton to snow languageskills'
                       type='radio'
-                      checked={item.nrChecked >= 2 ? true : false}
+                      defaultChecked={item.nrChecked >= 2 ? true : false}
                     ></input>
 
                     <input
+                      aria-label='radiobutton to snow languageskills'
                       type='radio'
-                      checked={item.nrChecked >= 3 ? true : false}
+                      defaultChecked={item.nrChecked >= 3 ? true : false}
                     ></input>
 
                     <input
+                      aria-label='radiobutton to snow languageskills'
                       type='radio'
-                      checked={item.nrChecked >= 4 ? true : false}
+                      defaultChecked={item.nrChecked >= 4 ? true : false}
                     ></input>
 
                     <input
+                      aria-label='radiobutton to snow languageskills'
                       type='radio'
-                      checked={item.nrChecked >= 5 ? true : false}
+                      defaultChecked={item.nrChecked >= 5 ? true : false}
                     ></input>
                   </div>
                 </article>

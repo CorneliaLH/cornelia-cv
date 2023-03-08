@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import "./scss/layout.css";
 
 export function Layoutcomponent() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [update, setUpdate] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   function LanguageSwitcher() {
     return (
