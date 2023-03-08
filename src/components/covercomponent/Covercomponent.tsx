@@ -1,7 +1,7 @@
 import "./scss/cover.css";
 import Cornelia2 from "../../images/Cornelia2.webp";
 import Cornelia2Tablet from "../../images/Cornelia2Tablet.webp";
-import iconCar from "../../images/car1.svg";
+import iconCar from "../../images/classiccar1.svg";
 import iconSki from "../../images/skiing.svg";
 import iconSwim from "../../images/diving.svg";
 
@@ -49,8 +49,8 @@ export function Covercomponent({ lang }: any) {
                     <img
                       src={iconCar}
                       alt='Ikon bil (intresse)'
-                      width='68'
-                      height='68'
+                      width='140'
+                      height='60'
                       className='intrestIcon'
                       id='iconCar'
                     />
