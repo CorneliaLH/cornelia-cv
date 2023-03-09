@@ -10,6 +10,7 @@ export function Portfoliocomponent({ lang }: any) {
             <a
               className='portfolioButton'
               href='https://medieinstitutet.github.io/fed21d-grafiska-verktyg-dubbel-nougat/'
+              target='_blank'
             >
               {lang === "en" ? "Fictive Color House" : "Fiktiv Färghuset"}
               <svg
@@ -57,6 +58,7 @@ export function Portfoliocomponent({ lang }: any) {
             <a
               className='portfolioButtonIcon'
               href='https://github.com/Medieinstitutet/fed21d-grafiska-verktyg-dubbel-nougat'
+              target='_blank'
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -71,6 +73,7 @@ export function Portfoliocomponent({ lang }: any) {
             <a
               className='portfolioButton'
               href='https://cornelialh.github.io/Assignment1/'
+              target='_blank'
             >
               {lang === "en" ? "Fictive Online Store" : "Fiktiv Webshop"}
               <svg
@@ -106,6 +109,7 @@ export function Portfoliocomponent({ lang }: any) {
             <a
               className='portfolioButtonIcon'
               href='https://github.com/CorneliaLH/Assignment1'
+              target='_blank'
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
