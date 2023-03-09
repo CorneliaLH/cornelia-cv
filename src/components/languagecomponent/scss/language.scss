@@ -80,6 +80,17 @@ input[type="radio"]:checked:after {
   border: 2px solid white;
 }
 
+@media (min-width: 600px) and (max-width: 900px) {
+  .languageContainer {
+    .languageBox {
+      width: 80%;
+      .languageHeading {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 599px) {
   .languageContainer {
     margin-bottom: 10vh;

@@ -19,7 +19,7 @@ export function Covercomponent({ lang }: any) {
                 </h1>
               ) : (
                 <h1 id='h1Cornelia'>
-                  Hi, my name is Cornelia, and I am studying to becoma a Front
+                  Hi, my name is Cornelia, and I am studying to become a Front
                   end developer
                 </h1>
               )}

@@ -1,0 +1,96 @@
+.containerPortfolio {
+  width: 100%;
+  min-height: 20vh;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .portfolioBox {
+    width: 60%;
+    background-color: #394b41e6;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    h2 {
+      color: #59f9b4;
+      width: 50%;
+      text-align: center;
+    }
+    .portfolioButtonContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: space;
+      align-items: center;
+      flex-wrap: wrap;
+      .portfolioButton {
+        flex-basis: 50%;
+        padding: 10px 20px 10px 20px;
+        border-radius: 15px;
+        background-color: white;
+        border: none;
+        color: #394b41;
+        font-size: 1.2rem;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+
+        svg {
+          margin-left: 10px;
+        }
+
+        cursor: pointer;
+        &:hover {
+          background-color: #59f9b4;
+        }
+      }
+      .portfolioButtonIcon {
+        border-radius: 15px;
+        background-color: white;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        padding: 7px;
+        svg {
+        }
+        cursor: pointer;
+        &:hover {
+          background-color: #59f9b4;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .containerPortfolio {
+    .portfolioBox {
+      width: 80%;
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .containerPortfolio {
+    .portfolioBox {
+      width: 90%;
+      flex-direction: column;
+      margin-bottom: 7vh;
+      h2 {
+        font-size: 1.2rem;
+      }
+      .portfolioButtonContainer {
+        width: 100%;
+        justify-content: space-around;
+      }
+    }
+  }
+}
