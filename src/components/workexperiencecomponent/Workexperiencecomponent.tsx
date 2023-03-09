@@ -187,8 +187,8 @@ export function Workexperiencecomponent({ lang }: any) {
                 <ul id={work.idcont} className='containerWork'>
                   {currentId == work.idcont ? (
                     <>
-                      <li>{work.item1}</li>
-                      <li>{work.item2}</li>
+                      <li className='workInfo'>{work.item1}</li>
+                      <li className='workMoreText'>{work.item2}</li>
                     </>
                   ) : (
                     <></>

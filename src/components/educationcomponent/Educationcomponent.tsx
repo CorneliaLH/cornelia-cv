@@ -1,7 +1,19 @@
+import { useState } from "react";
 import "./scss/education.css";
 
+interface IEducation {
+  heading: string;
+  time: string;
+  text: string;
+  id: string;
+  id1: string;
+}
+
 export function Educationcomponent({ lang }: any) {
-  let arrayEducation: any;
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [currentId, setCurrentId] = useState("");
+
+  let arrayEducation: IEducation[];
   if (lang === "en") {
     arrayEducation = [
       {
@@ -28,18 +40,21 @@ export function Educationcomponent({ lang }: any) {
       {
         heading: "English A",
         time: "Lund University / From August 2004 to December 2004",
+        text: "",
         id: "education4",
         id1: "eduCon4",
       },
       {
         heading: "Legal overview course",
         time: "Lund University / From March 2005 to June 2005",
+        text: "",
         id: "education5",
         id1: "eduCon5",
       },
       {
-        heading: "Rotary exchange student in Australia",
-        time: "St Hildas School for Girls / From June 1999 to June 2000",
+        heading: "Exchange student Australia",
+        time: "Rotary Youth Exchange, St Hildas School for Girls / From June 1999 to June 2000",
+        text: "",
         id: "education6",
         id1: "eduCon6",
       },
@@ -70,57 +85,27 @@ export function Educationcomponent({ lang }: any) {
       {
         heading: "Engelska A",
         time: "Lunds universitet / Från augusti 2004 till december 2004",
+        text: "",
         id: "education4",
         id1: "eduCon4",
       },
       {
         heading: "Juridisk översiktskurs",
         time: "Lunds universitet / Från mars 2005 till juni 2005",
+        text: "",
         id: "education5",
         id1: "eduCon5",
       },
       {
-        heading: "Rotary utbytesstudent i Australien",
-        time: "St Hildas School for Girls / Från juni 1999 till juni 2000",
+        heading: "Utbytesstudent Australien",
+        time: "Genom Rotary, St Hildas School for Girls / Från juni 1999 till juni 2000",
+        text: "",
         id: "education6",
         id1: "eduCon6",
       },
     ];
   }
 
-  function moreInformationEducation(
-    idFromClick: any,
-    idCont: any,
-    educationText: any,
-    educationTime: any
-  ) {
-    let educationContainer = document.getElementById(idCont);
-
-    if (document.getElementById(idFromClick + 2) === null) {
-      for (let i = 0; i < arrayEducation.length; i++) {
-        if (arrayEducation[i].id === idFromClick) {
-          let newText1 = document.createElement("li");
-          let newText2 = document.createElement("li");
-
-          if (educationText !== undefined) {
-            newText1.innerText = educationTime;
-            newText1.id = idFromClick + 3;
-            newText1.className = "educationTime";
-            educationContainer?.append(newText1);
-            newText2.innerText = educationText;
-            newText2.id = idFromClick + 2;
-            newText2.className = "educationMoreText";
-            educationContainer?.append(newText2);
-          }
-        }
-      }
-    } else {
-      let elementToRemove2 = document.getElementById(idFromClick + 2);
-      let elementToRemove3 = document.getElementById(idFromClick + 3);
-      elementToRemove2?.remove();
-      elementToRemove3?.remove();
-    }
-  }
   return (
     <>
       <div className='educationContainer' id='Utbildning'>
@@ -135,31 +120,48 @@ export function Educationcomponent({ lang }: any) {
                 <h3
                   className='educationTitle'
                   onClick={() => {
-                    moreInformationEducation(
-                      education.id,
-                      education.id1,
-                      education.text,
-                      education.time
-                    );
+                    if (showSubMenu === true && education.id1 !== currentId) {
+                      setShowSubMenu(false);
+                      setCurrentId(education.id1);
+                    } else if (
+                      showSubMenu === false &&
+                      education.id1 === currentId
+                    ) {
+                      setCurrentId("");
+                      setShowSubMenu(false);
+                    } else if (
+                      showSubMenu === true &&
+                      education.id1 === currentId
+                    ) {
+                      setCurrentId("");
+                      setShowSubMenu(false);
+                    } else if (showSubMenu === false) {
+                      setCurrentId(education.id1);
+                    }
                   }}
                 >
                   {education.heading}{" "}
-                  {education.text ? (
-                    <svg
-                      className='knowMoreIcon'
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='35'
-                      height='35'
-                      viewBox='0 0 16 16'
-                      fill='#59f9b4'
-                    >
-                      <path d='M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z' />
-                    </svg>
-                  ) : (
-                    ""
-                  )}
+                  <svg
+                    className='knowMoreIcon'
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='35'
+                    height='35'
+                    viewBox='0 0 16 16'
+                    fill='#59f9b4'
+                  >
+                    <path d='M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z' />
+                  </svg>
                 </h3>
-                <ul id={education.id1}></ul>
+                <ul id={education.id1}>
+                  {currentId == education.id1 ? (
+                    <>
+                      <li className='educationTime'>{education.time}</li>
+                      <li className='educationMoreText'>{education.text}</li>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </ul>
               </article>
             ))}
           </section>
