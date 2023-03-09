@@ -1,6 +1,10 @@
+import { useState } from "react";
 import "./scss/workexperience.css";
 
 export function Workexperiencecomponent({ lang }: any) {
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [currentId, setCurrentId] = useState("");
+
   let workArray: any;
 
   if (lang === "en") {
@@ -125,39 +129,6 @@ export function Workexperiencecomponent({ lang }: any) {
     ];
   }
 
-  function moreInformationWork(
-    workId: any,
-    workIdCont: any,
-    workText: any,
-    workTime: any
-  ) {
-    let workexperienceContainer = document.getElementById(workIdCont);
-
-    if (document.getElementById(workId + 2) === null) {
-      for (let i = 0; i < workArray.length; i++) {
-        if (workArray[i].id === workId) {
-          let newText1 = document.createElement("li");
-          let newText2 = document.createElement("li");
-          if (workText !== undefined) {
-            newText1.innerText = workTime;
-            newText1.id = workId + 3;
-            newText1.className = "educationTime";
-            workexperienceContainer?.append(newText1);
-            newText2.innerText = workText;
-            newText2.id = workId + 2;
-            newText2.className = "workMoreText";
-            workexperienceContainer?.append(newText2);
-          }
-        }
-      }
-    } else {
-      let elementToRemove2 = document.getElementById(workId + 2);
-      let elementToRemove3 = document.getElementById(workId + 3);
-      elementToRemove2?.remove();
-      elementToRemove3?.remove();
-    }
-  }
-
   return (
     <>
       <div className='workexperienceContainer' id='Arbetslivserfarenhet'>
@@ -172,13 +143,26 @@ export function Workexperiencecomponent({ lang }: any) {
                 {" "}
                 <h3
                   className='workTitle'
-                  onClick={() => {
-                    moreInformationWork(
-                      work.id,
-                      work.idcont,
-                      work.item2,
-                      work.item1
-                    );
+                  onClick={(e) => {
+                    if (showSubMenu === true && work.idcont !== currentId) {
+                      setShowSubMenu(false);
+                      setCurrentId(work.idcont);
+                    } else if (
+                      showSubMenu === false &&
+                      work.idcont === currentId
+                    ) {
+                      setCurrentId("");
+                      setShowSubMenu(false);
+                    } else if (
+                      showSubMenu === true &&
+                      work.idcont === currentId
+                    ) {
+                      setCurrentId("");
+                      setShowSubMenu(false);
+                      console.log(3);
+                    } else if (showSubMenu === false) {
+                      setCurrentId(work.idcont);
+                    }
                   }}
                 >
                   {work.title}{" "}
@@ -193,7 +177,16 @@ export function Workexperiencecomponent({ lang }: any) {
                     <path d='M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z' />
                   </svg>
                 </h3>
-                <ul id={work.idcont} className='containerWork'></ul>
+                <ul id={work.idcont} className='containerWork'>
+                  {currentId == work.idcont ? (
+                    <>
+                      <li>{work.item1}</li>
+                      <li>{work.item2}</li>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </ul>
               </div>
             ))}
           </div>
