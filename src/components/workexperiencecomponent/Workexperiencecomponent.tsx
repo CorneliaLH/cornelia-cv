@@ -1,11 +1,19 @@
 import { useState } from "react";
 import "./scss/workexperience.css";
 
+interface IWork {
+  title: string;
+  item1: string;
+  item2: string;
+  id: string;
+  idcont: string;
+}
+
 export function Workexperiencecomponent({ lang }: any) {
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [currentId, setCurrentId] = useState("");
 
-  let workArray: any;
+  let workArray: IWork[];
 
   if (lang === "en") {
     workArray = [
@@ -138,7 +146,7 @@ export function Workexperiencecomponent({ lang }: any) {
             {lang === "se" ? "Arbetslivserfarenhet" : "Work experience"}
           </h2>
           <div className='workText'>
-            {workArray.map((work: any) => (
+            {workArray.map((work: IWork) => (
               <div key={work.title}>
                 {" "}
                 <h3
@@ -159,7 +167,6 @@ export function Workexperiencecomponent({ lang }: any) {
                     ) {
                       setCurrentId("");
                       setShowSubMenu(false);
-                      console.log(3);
                     } else if (showSubMenu === false) {
                       setCurrentId(work.idcont);
                     }
