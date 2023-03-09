@@ -4,8 +4,9 @@ import Cornelia2Tablet from "../../images/Cornelia2Tablet.webp";
 import iconCar from "../../images/classiccar1.svg";
 import iconSki from "../../images/skiing.svg";
 import iconSwim from "../../images/diving.svg";
+import { ILang } from "../../models/ILang";
 
-export function Covercomponent({ lang }: any) {
+export function Covercomponent({ lang }: ILang) {
   return (
     <>
       <div className='containerCover' id='hem'>

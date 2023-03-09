@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ILang } from "../../models/ILang";
 import "./scss/education.css";
 
 interface IEducation {
@@ -9,7 +10,7 @@ interface IEducation {
   id1: string;
 }
 
-export function Educationcomponent({ lang }: any) {
+export function Educationcomponent({ lang }: ILang) {
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [currentId, setCurrentId] = useState("");
 
@@ -115,7 +116,7 @@ export function Educationcomponent({ lang }: any) {
           </h2>
 
           <section className='educationText'>
-            {arrayEducation.map((education: any) => (
+            {arrayEducation.map((education: IEducation) => (
               <article key={education.heading} id={education.id}>
                 <h3
                   className='educationTitle'

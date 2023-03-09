@@ -19,7 +19,7 @@ export function MainEngcomponent() {
       {<Portfoliocomponent lang={"en"} />}
       {<Languagecomponent lang={"en"} />}
       {<Aboutmecomponent lang={"en"} />}
-      {<Footercomponent lang={"en"} />}
+      {<Footercomponent />}
     </>
   );
 }

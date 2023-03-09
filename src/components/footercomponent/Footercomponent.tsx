@@ -3,7 +3,7 @@ import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.svg";
 import envelope from "../../images/envelope.svg";
 
-export function Footercomponent({ lang }: any) {
+export function Footercomponent() {
   return (
     <>
       <footer className='footer' id='Socialt'>
@@ -29,7 +29,7 @@ export function Footercomponent({ lang }: any) {
             </article>
           </section>
           <section className='copyright'>
-            <p>Copyright 2022</p>
+            <p>Copyright 2023</p>
           </section>
           <section className='contact'>
             <img src={envelope} alt='ikon brev' width='35' height='35' />{" "}

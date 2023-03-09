@@ -1,7 +1,13 @@
+import { ILang } from "../../models/ILang";
 import "./scss/language.css";
 
-export function Languagecomponent({ lang }: any) {
-  let languageArray: any;
+interface ILanguage {
+  language: string;
+  nrChecked: number;
+}
+
+export function Languagecomponent({ lang }: ILang) {
+  let languageArray: ILanguage[];
   if (lang === "se") {
     languageArray = [
       {
@@ -50,7 +56,7 @@ export function Languagecomponent({ lang }: any) {
           </h2>
 
           <div className='radioContainer'>
-            {languageArray.map((item: any) => {
+            {languageArray.map((item: ILanguage) => {
               return (
                 <article key={item.language} className='languageArticle'>
                   <h3 className='languageRadioHeading'>{item.language}</h3>

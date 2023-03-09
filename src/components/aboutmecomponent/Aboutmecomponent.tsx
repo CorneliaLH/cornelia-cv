@@ -1,7 +1,8 @@
 import "./scss/aboutme.css";
 import undraw_target_re_fi8j from "../../images/undraw_target_re_fi8j.svg";
+import { ILang } from "../../models/ILang";
 
-export function Aboutmecomponent({ lang }: any) {
+export function Aboutmecomponent({ lang }: ILang) {
   return (
     <>
       <div className='aboutmeContainer'>

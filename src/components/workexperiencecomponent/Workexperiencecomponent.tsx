@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ILang } from "../../models/ILang";
 import "./scss/workexperience.css";
 
 interface IWork {
@@ -9,7 +10,7 @@ interface IWork {
   idcont: string;
 }
 
-export function Workexperiencecomponent({ lang }: any) {
+export function Workexperiencecomponent({ lang }: ILang) {
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [currentId, setCurrentId] = useState("");
 

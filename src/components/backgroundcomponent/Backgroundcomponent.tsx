@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { ILang } from "../../models/ILang";
 import "./scss/background.css";
 
-export function Backgroundcomponent({ lang }: any) {
+export function Backgroundcomponent({ lang }: ILang) {
   const [progressBoolean, setProgressBoolean] = useState(false);
 
   let arraySkills = [

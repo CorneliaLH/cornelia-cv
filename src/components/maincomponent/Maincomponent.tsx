@@ -20,7 +20,7 @@ export function Maincomponent() {
       {<Portfoliocomponent lang={"se"} />}
       {<Languagecomponent lang={"se"} />}
       {<Aboutmecomponent lang={"se"} />}
-      {<Footercomponent lang={"se"} />}
+      {<Footercomponent />}
     </>
   );
 }

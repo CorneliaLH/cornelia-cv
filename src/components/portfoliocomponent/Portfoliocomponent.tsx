@@ -1,6 +1,7 @@
+import { ILang } from "../../models/ILang";
 import "./scss/portfolio.css";
 
-export function Portfoliocomponent({ lang }: any) {
+export function Portfoliocomponent({ lang }: ILang) {
   return (
     <>
       <div className='containerPortfolio'>
