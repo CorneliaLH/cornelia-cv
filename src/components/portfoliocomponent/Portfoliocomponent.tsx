@@ -14,7 +14,7 @@ export function Portfoliocomponent({ lang }: ILang) {
                 href='https://project-frontend-degree.vercel.app/'
                 target='_blank'
               >
-                {lang === "en" ? "Musician page" : "Musikersida"}
+                {lang === "en" ? "Musician Website" : "Musikersida"}
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 40 40'
