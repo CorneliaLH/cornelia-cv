@@ -1,9 +1,14 @@
 .hoverText {
-  display: none;
+  height: 0px;
+  width: 0px;
+  opacity: 0;
 }
 
 .portfolioButtonContainer > div:hover + .hoverText {
-  display: block;
+  height: fit-content;
+  width: fit-content;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 
 .containerPortfolio {

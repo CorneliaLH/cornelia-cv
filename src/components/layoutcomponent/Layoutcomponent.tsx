@@ -50,6 +50,7 @@ export function Layoutcomponent() {
       "Front-end knowledge",
       "Work experience",
       "Education",
+      "Portfolio",
       "Socials",
       "Contact",
     ];
@@ -59,6 +60,7 @@ export function Layoutcomponent() {
       "Front-end kunskaper",
       "Arbetslivserfarenhet",
       "Utbildning",
+      "Portfolio",
       "Socialt",
       "Kontakt",
     ];

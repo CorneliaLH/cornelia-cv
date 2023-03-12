@@ -4,7 +4,7 @@ import "./scss/portfolio.css";
 export function Portfoliocomponent({ lang }: ILang) {
   return (
     <>
-      <div className='containerPortfolio'>
+      <div className='containerPortfolio' id='Portfolio'>
         <section className='portfolioBox'>
           <h2>Portfolio</h2>
           <div className='portfolioButtonContainer'>
