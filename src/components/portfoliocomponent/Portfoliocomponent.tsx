@@ -76,13 +76,14 @@ export function Portfoliocomponent({ lang }: ILang) {
             {lang !== "en" ? (
               <p className='hoverText'>
                 Examensprojekt. Temporär deploy. Väntar på content och beslut
-                angående domännamn. React.js, Typescript, Node.js, MongoDB.
+                angående domännamn. Tar ca. 1 minut för backend att vakna.
+                React.js, Typescript, Node.js, MongoDB.
               </p>
             ) : (
               <p className='hoverText'>
                 Graduation project. Temporary deploy. Awaiting content and
-                decision about domain name. React.js, Typescript, Node.js,
-                MongoDB.
+                decision about domain name. Takes about 1 minute for backend to
+                wake up. React.js, Typescript, Node.js, MongoDB.
               </p>
             )}
 
