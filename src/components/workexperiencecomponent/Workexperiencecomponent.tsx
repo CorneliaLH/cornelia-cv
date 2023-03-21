@@ -22,7 +22,7 @@ export function Workexperiencecomponent({ lang }: ILang) {
         title: `TeQflo`,
         item1:
           "Front-end developer (internship) / From October 2022 to December 2022 and February 2023 to present",
-        item2: `About the role: Gained experience working as a consultant in web development. Worked with Hubspot CMS, as well as with Hubl and Javascript.`,
+        item2: `About the role: Gained experience working as a consultant in web development. I have worked with Hubspot CMS, creating custom module using HTML, CSS, Javascript and Hubl. I have worked on both internal projects and customer projects.`,
         id: "work1",
         idcont: "workCont1",
       },
@@ -82,7 +82,7 @@ export function Workexperiencecomponent({ lang }: ILang) {
         title: `TeQflo`,
         item1:
           "Front-end utvecklare (LIA) / Från oktober 2022 till december 2022 och februari 2023 till nu",
-        item2: `Kort om rollen: Fått erfarenhet att arbeta som konsult inom Webbutveckling. Arbetat i Hubspot CMS, och med Hubl och Javascript.`,
+        item2: `Kort om rollen: Fått erfarenhet att arbeta som konsult inom Webbutveckling. Arbetat i Hubspot CMS (Hubl) och HTML, CSS och Javascript. Arbetat både på interna projekt och mot kund.`,
         id: "work1",
         idcont: "workCont1",
       },
