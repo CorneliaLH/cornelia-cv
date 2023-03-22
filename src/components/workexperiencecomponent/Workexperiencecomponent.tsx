@@ -22,7 +22,7 @@ export function Workexperiencecomponent({ lang }: ILang) {
         title: `TeQflo`,
         item1:
           "Front-end developer (internship) / From October 2022 to December 2022 and February 2023 to present",
-        item2: `About the role: Gained experience working as a consultant in web development. I have worked with Hubspot CMS, creating custom module using HTML, CSS, Javascript and Hubl. I have worked on both internal projects and customer projects.`,
+        item2: `About the role: I have soon completed two internship periods with TeQflo. The first was a 10-week internship in 2022, and the second is currently ongoing and will last for 16 weeks in 2023. TeQflo is an IT and strategy consulting company that specializes in helping medium-sized and growing companies with digitalization and digital transformation. As a front-end developer intern, I have had the opportunity to work on a range of projects and develop a variety of skills. In addition to working with HTML, CSS, and JavaScript, I have gained experience in designing and implementing responsive web layouts and optimizing website performance. I have also learned how to work effectively as part of a team and collaborate with other developers and designers to deliver high-quality solutions for clients. Throughout my internship, I have been committed to staying up-to-date with the latest trends and best practices in front-end development, and have actively sought out opportunities to expand my knowledge and skills.`,
         id: "work1",
         idcont: "workCont1",
       },
@@ -82,7 +82,8 @@ export function Workexperiencecomponent({ lang }: ILang) {
         title: `TeQflo`,
         item1:
           "Front-end utvecklare (LIA) / Från oktober 2022 till december 2022 och februari 2023 till nu",
-        item2: `Kort om rollen: Fått erfarenhet att arbeta som konsult inom Webbutveckling. Arbetat i Hubspot CMS (Hubl) och HTML, CSS och Javascript. Arbetat både på interna projekt och mot kund.`,
+        item2: `Kort om rollen: Jag har snart genomfört två praktikperioder på TeQflo. Den första var en 10-veckors praktik under 2022 och den andra pågår just nu och kommer att pågå i 16 veckor under 2023. TeQflo är ett IT- och strategikonsultföretag som är specialiserat på att hjälpa medelstora och växande företag med digitalisering och digital transformation.
+        Som praktikant inom front-end utveckling har jag haft möjlighet att arbeta med olika projekt och utveckla en rad olika färdigheter. Förutom att arbeta med HTML, CSS och JavaScript har jag fått erfarenhet av att designa och implementera responsiva webblayouter och optimera webbplatsprestanda. Jag har också lärt mig att arbeta effektivt som en del av ett team och samarbeta med andra utvecklare och designers för att leverera högkvalitativa lösningar till kunderna. Under hela min praktikperiod har jag varit engagerad i att hålla mig uppdaterad om de senaste trenderna och bästa praxis inom front-end utveckling och aktivt sökt möjligheter att utöka mina kunskaper och färdigheter.`,
         id: "work1",
         idcont: "workCont1",
       },
